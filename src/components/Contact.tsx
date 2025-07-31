@@ -47,10 +47,10 @@ const Contact = () => {
             
             <div className="grid sm:grid-cols-2 gap-6 mb-8">
               {contactInfo.map((info, index) => (
-                <Card key={index} className="bg-white/10 border-white/20 backdrop-blur-sm">
+                <Card key={index} className="bg-white/10 border-white/20 backdrop-blur-xs">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 bg-construction-orange/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-10 h-10 bg-construction-orange/20 rounded-lg flex items-center justify-center shrink-0">
                         <info.icon className="w-5 h-5 text-construction-yellow" />
                       </div>
                       <div>
@@ -81,9 +81,9 @@ const Contact = () => {
               alt="Infrastructure construction work"
               className="rounded-2xl shadow-construction w-full h-96 object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-construction-dark/60 to-transparent rounded-2xl"></div>
+            <div className="absolute inset-0 bg-linear-to-t from-construction-dark/60 to-transparent rounded-2xl"></div>
             <div className="absolute bottom-6 left-6 right-6">
-              <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6">
+              <div className="bg-white/90 backdrop-blur-xs rounded-xl p-6">
                 <h4 className="font-bold text-construction-dark mb-2">Quality Assurance</h4>
                 <p className="text-sm text-construction-gray">
                   Our highly effective management, accurate planning and resource deployment 

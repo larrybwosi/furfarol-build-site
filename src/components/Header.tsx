@@ -33,7 +33,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm"
+      className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xs shadow-xs"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -42,7 +42,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo with animation */}
           <motion.div
-            className="flex-shrink-0"
+            className="shrink-0"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
@@ -110,7 +110,7 @@ const Header = () => {
           <motion.div className="md:hidden" whileTap={{ scale: 0.9 }}>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-construction-gray hover:text-construction-orange p-2 rounded-md focus:outline-none"
+              className="text-construction-gray hover:text-construction-orange p-2 rounded-md focus:outline-hidden"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (

@@ -98,8 +98,8 @@ const Hero = () => {
           className="w-full h-full object-cover"
         />
         {/* Multi-layered gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-construction-dark/90 via-construction-dark/70 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-construction-dark/60 via-transparent to-construction-dark/30"></div>
+        <div className="absolute inset-0 bg-linear-to-br from-construction-dark/90 via-construction-dark/70 to-transparent"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-construction-dark/60 via-transparent to-construction-dark/30"></div>
 
         {/* Animated geometric patterns */}
         <motion.div
@@ -162,7 +162,7 @@ const Hero = () => {
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
                 <span className="block">Crafting</span>
                 <motion.span
-                  className="block bg-gradient-to-r from-construction-yellow via-construction-orange to-construction-yellow bg-clip-text text-transparent"
+                  className="block bg-linear-to-r from-construction-yellow via-construction-orange to-construction-yellow bg-clip-text text-transparent"
                   animate={{
                     backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                   }}
@@ -207,7 +207,7 @@ const Hero = () => {
                       damping: 20,
                     }}
                   >
-                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 hover:border-construction-yellow/50 transition-all duration-300">
+                    <div className="bg-white/10 backdrop-blur-xs rounded-xl p-4 border border-white/20 hover:bg-white/20 hover:border-construction-yellow/50 transition-all duration-300">
                       <motion.div
                         className="flex justify-center mb-3"
                         whileHover={{ rotate: 360 }}
@@ -248,7 +248,7 @@ const Hero = () => {
                 <Button
                   variant="construction"
                   size="lg"
-                  className="group relative overflow-hidden bg-gradient-to-r from-construction-yellow to-construction-orange hover:from-construction-orange hover:to-construction-yellow transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="group relative overflow-hidden bg-linear-to-r from-construction-yellow to-construction-orange hover:from-construction-orange hover:to-construction-yellow transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   <span className="relative z-10">Get Started</span>
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
@@ -312,7 +312,7 @@ const Hero = () => {
 
                 {/* Inner circle */}
                 <motion.div
-                  className="absolute inset-16 rounded-full bg-gradient-to-br from-construction-yellow/20 to-construction-orange/20 backdrop-blur-sm flex items-center justify-center"
+                  className="absolute inset-16 rounded-full bg-linear-to-br from-construction-yellow/20 to-construction-orange/20 backdrop-blur-xs flex items-center justify-center"
                   variants={pulseVariants}
                   animate="animate"
                 >

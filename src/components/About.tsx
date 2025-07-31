@@ -44,7 +44,7 @@ const About = () => {
             <div className="space-y-3 mb-8">
               {highlights.map((highlight, index) => (
                 <div key={index} className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-construction-orange flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-construction-orange shrink-0" />
                   <span className="text-construction-gray">{highlight}</span>
                 </div>
               ))}
@@ -89,11 +89,11 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <Card className="border-0 shadow-soft hover:shadow-construction transition-all duration-300 bg-white/80 backdrop-blur-sm">
+              <Card className="border-0 shadow-soft hover:shadow-construction transition-all duration-300 bg-white/80 backdrop-blur-xs">
                 <CardContent className="p-8">
                   <div className="flex items-center gap-4 mb-6">
                     <motion.div 
-                      className="w-16 h-16 bg-gradient-to-br from-construction-orange/10 to-construction-orange/20 rounded-xl flex items-center justify-center"
+                      className="w-16 h-16 bg-linear-to-br from-construction-orange/10 to-construction-orange/20 rounded-xl flex items-center justify-center"
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       transition={{ duration: 0.3 }}
                     >
@@ -130,11 +130,11 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <Card className="border-0 shadow-soft hover:shadow-construction transition-all duration-300 bg-white/80 backdrop-blur-sm">
+              <Card className="border-0 shadow-soft hover:shadow-construction transition-all duration-300 bg-white/80 backdrop-blur-xs">
                 <CardContent className="p-8">
                   <div className="flex items-center gap-4 mb-6">
                     <motion.div 
-                      className="w-16 h-16 bg-gradient-to-br from-construction-yellow/20 to-construction-orange/20 rounded-xl flex items-center justify-center"
+                      className="w-16 h-16 bg-linear-to-br from-construction-yellow/20 to-construction-orange/20 rounded-xl flex items-center justify-center"
                       whileHover={{ scale: 1.1, rotate: -5 }}
                       transition={{ duration: 0.3 }}
                     >

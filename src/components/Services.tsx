@@ -87,7 +87,7 @@ const Services = () => {
   return (
     <section className="py-20 bg-background relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-yellow-500/5"></div>
+      <div className="absolute inset-0 bg-linear-to-br from-orange-500/5 via-transparent to-yellow-500/5"></div>
 
       <div className=" mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 relative">
         <motion.div
