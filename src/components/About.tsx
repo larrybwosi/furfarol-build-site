@@ -1,7 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Target, Eye, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
 import constructionMaterials from "@/assets/construction-materials.jpg";
+import missionImage from "@/assets/mission-image.jpg";
+import visionImage from "@/assets/vision-image.jpg";
 
 const About = () => {
   const highlights = [
@@ -53,44 +56,116 @@ const About = () => {
           </div>
         </div>
 
-        {/* Mission and Vision */}
-        <div className="grid md:grid-cols-2 gap-8">
-          <Card className="border-0 shadow-soft hover:shadow-construction transition-all duration-300">
-            <CardContent className="p-8">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-construction-orange/10 rounded-xl flex items-center justify-center">
-                  <Target className="w-6 h-6 text-construction-orange" />
-                </div>
-                <h3 className="text-2xl font-bold text-construction-dark">Our Mission</h3>
-              </div>
-              <p className="text-construction-gray leading-relaxed mb-6">
-                To offer long-term shareholder value through unmatched construction and service 
-                skills to our customers, where quality, efficiency and reliability of infrastructure 
-                is a must. We aim to employ a locally based skilled and experienced workforce.
-              </p>
-              <div className="flex items-center gap-2 text-construction-gray">
-                <MapPin className="w-4 h-4" />
-                <span className="text-sm">Furfarol Market, Eldoret-Kitale Highway</span>
-              </div>
-            </CardContent>
-          </Card>
+        {/* Mission and Vision - Alternating Layout */}
+        <div className="space-y-20">
+          {/* Mission Section */}
+          <motion.div 
+            className="grid lg:grid-cols-2 gap-12 items-center"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            {/* Image on Left */}
+            <motion.div 
+              className="order-2 lg:order-1"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <img
+                src={missionImage}
+                alt="Our mission - construction team working"
+                className="rounded-2xl shadow-construction w-full h-80 object-cover"
+              />
+            </motion.div>
+            
+            {/* Content on Right */}
+            <motion.div 
+              className="order-1 lg:order-2"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <Card className="border-0 shadow-soft hover:shadow-construction transition-all duration-300 bg-white/80 backdrop-blur-sm">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <motion.div 
+                      className="w-16 h-16 bg-gradient-to-br from-construction-orange/10 to-construction-orange/20 rounded-xl flex items-center justify-center"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Target className="w-8 h-8 text-construction-orange" />
+                    </motion.div>
+                    <h3 className="text-3xl font-bold text-construction-dark">Our Mission</h3>
+                  </div>
+                  <p className="text-construction-gray leading-relaxed mb-6 text-lg">
+                    To offer long-term shareholder value through unmatched construction and service 
+                    skills to our customers, where quality, efficiency and reliability of infrastructure 
+                    is a must. We aim to employ a locally based skilled and experienced workforce.
+                  </p>
+                  <div className="flex items-center gap-3 text-construction-gray bg-construction-light/50 p-4 rounded-lg">
+                    <MapPin className="w-5 h-5 text-construction-orange" />
+                    <span className="font-medium">Furfarol Market, Eldoret-Kitale Highway</span>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </motion.div>
 
-          <Card className="border-0 shadow-soft hover:shadow-construction transition-all duration-300">
-            <CardContent className="p-8">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-construction-yellow/20 rounded-xl flex items-center justify-center">
-                  <Eye className="w-6 h-6 text-construction-orange" />
-                </div>
-                <h3 className="text-2xl font-bold text-construction-dark">Our Vision</h3>
-              </div>
-              <p className="text-construction-gray leading-relaxed">
-                To venture into large scale residential construction segment and expand to 
-                higher margin office and commercial construction segments. We are committed 
-                to executing projects with high technical quality, working within budget, 
-                while adhering to safety and environmental concerns.
-              </p>
-            </CardContent>
-          </Card>
+          {/* Vision Section */}
+          <motion.div 
+            className="grid lg:grid-cols-2 gap-12 items-center"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            {/* Content on Left */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <Card className="border-0 shadow-soft hover:shadow-construction transition-all duration-300 bg-white/80 backdrop-blur-sm">
+                <CardContent className="p-8">
+                  <div className="flex items-center gap-4 mb-6">
+                    <motion.div 
+                      className="w-16 h-16 bg-gradient-to-br from-construction-yellow/20 to-construction-orange/20 rounded-xl flex items-center justify-center"
+                      whileHover={{ scale: 1.1, rotate: -5 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Eye className="w-8 h-8 text-construction-orange" />
+                    </motion.div>
+                    <h3 className="text-3xl font-bold text-construction-dark">Our Vision</h3>
+                  </div>
+                  <p className="text-construction-gray leading-relaxed text-lg">
+                    To venture into large scale residential construction segment and expand to 
+                    higher margin office and commercial construction segments. We are committed 
+                    to executing projects with high technical quality, working within budget, 
+                    while adhering to safety and environmental concerns.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+            
+            {/* Image on Right */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <img
+                src={visionImage}
+                alt="Our vision - modern construction office"
+                className="rounded-2xl shadow-construction w-full h-80 object-cover"
+              />
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>
