@@ -2,9 +2,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Target, Eye, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
-import constructionMaterials from "@/assets/construction-materials.jpg";
-import missionImage from "@/assets/mission-image.jpg";
-import visionImage from "@/assets/vision-image.jpg";
+import constructionMaterials from "@/assets/materials.jpg";
+import missionImage from "@/assets/construction-site.jpg";
+import visionImage from "@/assets/land-surveyour.jpg";
 
 const About = () => {
   const highlights = [

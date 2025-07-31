@@ -169,8 +169,6 @@ const Header = () => {
                   <Button
                     variant="construction"
                     className="w-full"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
                   >
                     Get Quote
                   </Button>

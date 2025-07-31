@@ -8,23 +8,27 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Our Location",
-      details: ["Furfarol Market", "Off Eldoret-Kitale Highway", "Likuyani Sub-county, Kakamega County"]
+      details: [
+        "Furfarol Market",
+        "Off Eldoret-Kitale Highway",
+        "Likuyani Sub-county, Kakamega County",
+      ],
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+254 XXX XXX XXX", "Available 24/7"]
+      details: ["+254 726589494", "Available 24/7"],
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@furfarol.co.ke", "projects@furfarol.co.ke"]
+      details: ["furfarolcontractors@gmail.com", "projects@furfarol.co.ke"],
     },
     {
       icon: Clock,
       title: "Working Hours",
-      details: ["Mon - Fri: 8:00 AM - 6:00 PM", "Sat: 8:00 AM - 4:00 PM"]
-    }
+      details: ["Mon - Fri: 8:00 AM - 6:00 PM", "Sat: 8:00 AM - 4:00 PM"],
+    },
   ];
 
   return (
