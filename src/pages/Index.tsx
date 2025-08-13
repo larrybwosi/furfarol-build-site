@@ -5,6 +5,7 @@ import Services from "@/components/Services";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import InfiniteTestimonialsDemo from "@/components/Testimonials";
 
 const Index = () => {
   return (
@@ -19,6 +20,9 @@ const Index = () => {
         </section>
         <section id="about">
           <About />
+        </section>
+        <section id="testimonials">
+          <InfiniteTestimonialsDemo />
         </section>
         <section id="contact">
           <Contact />
