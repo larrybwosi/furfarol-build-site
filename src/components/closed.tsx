@@ -74,13 +74,13 @@ export default function MaintenancePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:support@yourwebsite.com"
+              href="mailto:larrybwosi@gmail.com"
               className="inline-flex items-center justify-center px-6 py-3 bg-slate-900 text-white font-medium rounded-lg hover:bg-slate-800 transition-colors"
             >
               Email Support
             </a>
             <a
-              href="tel:+1234567890"
+              href="tel:+254710805302"
               className="inline-flex items-center justify-center px-6 py-3 bg-white text-slate-900 font-medium rounded-lg border border-slate-300 hover:bg-slate-50 transition-colors"
             >
               Call Support
